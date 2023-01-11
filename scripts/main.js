@@ -6,7 +6,7 @@ let berry ={
 
 const cfg = {
   step : 0,
-  maxStep: 6,
+  maxStep: 25,
   sizeCell: 16,
   sizeBerry: 16/4
 }
@@ -61,7 +61,10 @@ function drawSnake (){
         if( el.x === berry.x && el.y === berry.y){
             snake.maxTails++
             incScore()
-            randomPositionBerry()
+            if(cfg.maxStep > 1){
+                cfg.maxStep = +((30/(2**((30+score)/100))).toPrecision(4))
+            }
+                randomPositionBerry()
         }
         for(let i = index + 1; i< snake.tails.length; i++ ){
             if( el.x === snake.tails[i].x && el.y === snake.tails[i].y){
