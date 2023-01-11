@@ -55,8 +55,8 @@ function drawSnake (){
 
     snake.tails.forEach((el, index)=> {
         if(index === 0){
-            context.fillStyle = "#FA0556"
-        } else  context.fillStyle = "#A00034"
+            context.fillStyle = "#046b06"
+        } else  context.fillStyle = "#32f535"
         context.fillRect(el.x, el.y, cfg.sizeCell, cfg.sizeCell)
         if( el.x === berry.x && el.y === berry.y){
             snake.maxTails++
@@ -125,6 +125,7 @@ function drawScore() {
 function getRandom(min, max) {
     return Math.floor(Math.random()*(max-min)+min)
 }
+
 document.addEventListener('keydown', e =>{
     switch (e.code) {
         case 'KeyW': if(snake.dx !== 0) snake.dy = -cfg.sizeCell; snake.dx = 0;

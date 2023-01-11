@@ -23,7 +23,6 @@ body {
 .game-header {
 	padding-top: 1vmin;
 	padding-bottom: 1vmin;
-
 	display: flex;
 	justify-content: space-between;
 }
@@ -33,7 +32,7 @@ body {
 	height: 50px;
 	background: #121214;
 	border-radius: 5px;
-
+	border: 3px solid #49494f;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -47,7 +46,7 @@ body {
 .canvas-wrapper {
 	background-color: #161618;
 	border-radius: 5px;
-	border: 10px solid #161618;
+	border: 10px solid #49494f;
 	box-shadow: 0 0 40px 10px #161618;
 
 	background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Ccircle cx='8' cy='8' r='4' fill='%23525053'/%3E%3C/g%3E%3C/svg%3E%0A");
