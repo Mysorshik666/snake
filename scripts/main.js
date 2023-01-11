@@ -128,21 +128,14 @@ function getRandom(min, max) {
 
 document.addEventListener('keydown', e =>{
     switch (e.code) {
-        case 'KeyW': snake.dy = -cfg.sizeCell;
-                    snake.dx = 0;
+        case 'KeyW': if(snake.dx !== 0) snake.dy = -cfg.sizeCell; snake.dx = 0;
             break;
-
-        case 'KeyA': snake.dx = -cfg.sizeCell;
-                     snake.dy = 0;
+        case 'KeyA': if(snake.dy !== 0) snake.dx = -cfg.sizeCell; snake.dy = 0;
             break;
-
-        case 'KeyS': snake.dy = cfg.sizeCell;
-                     snake.dx = 0; 
+        case 'KeyS':  if(snake.dx !== 0) snake.dy = cfg.sizeCell; snake.dx = 0;
             break;
-        case 'KeyD': snake.dx = cfg.sizeCell;
-                     snake.dy = 0; 
+        case 'KeyD':  if(snake.dy !== 0) snake.dx = cfg.sizeCell; snake.dy = 0;
             break;
-    
         default:
             break;
     }
