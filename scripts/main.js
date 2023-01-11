@@ -125,7 +125,6 @@ function drawScore() {
 function getRandom(min, max) {
     return Math.floor(Math.random()*(max-min)+min)
 }
-
 document.addEventListener('keydown', e =>{
     switch (e.code) {
         case 'KeyW': if(snake.dx !== 0) snake.dy = -cfg.sizeCell; snake.dx = 0;
